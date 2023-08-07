@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="registroForm" (keyup.enter)="register(registroForm.value)">
+    <ion-item>
+      <ion-label position="floating">Nombre: </ion-label>
+      <ion-input formControlName="Nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Apellido Paterno: </ion-label>
+      <ion-input formControlName="Apellido_Paterno"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Apellido Materno: </ion-label>
+      <ion-input formControlName="Apellido_Materno"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Matricula de UNEDL: </ion-label>
+      <ion-input formControlName="Matricula"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Programa al que Perteneces: </ion-label>
+      <ion-input formControlName="ID_Perfil"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Genero: </ion-label>
+      <ion-input formControlName="Genero"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fecha Nacimiento: </ion-label>
+      <ion-input formControlName="Fecha_Nacimiento"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Correo Electronico: </ion-label>
+      <ion-input formControlName="Correo_Electronico"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Estado: </ion-label>
+      <ion-input formControlName="ID_Estado"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Municipio: </ion-label>
+      <ion-input formControlName="ID_Municipio"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Colonia: </ion-label>
+      <ion-input formControlName="Colonia"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Codigo Postal: </ion-label>
+      <ion-input formControlName="Codigo_Postal"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Entrenamiento Previo: </ion-label>
+      <ion-input formControlName="Entrenamiento"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Tipo de Entrenamiento: </ion-label>
+      <ion-input formControlName="Tipo_Entrenamiento"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Lesion Previa: </ion-label>
+      <ion-input formControlName="Lesion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Tipo de Lesion: </ion-label>
+      <ion-input formControlName="Tipo_Lesion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Objetivo: </ion-label>
+      <ion-input formControlName="Objetivo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña: </ion-label>
+      <ion-input formControlName="Contrasena"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="register(registroForm.value)">Iniciar sesion</ion-button>
+
+
+  </form>
+</ion-content>

@@ -2,15 +2,36 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
+
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  // {
+  //   path: 'asistencias',
+  //   loadChildren: () => import('./asistencias/asistencias.module').then( m => m.AsistenciasPageModule)
+  // },
+  // {
+  //   path: 'inicio',
+  //   loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  // },
+  // {
+  //   path: 'perfil',
+  //   loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  // },
 ];
 
 @NgModule({
