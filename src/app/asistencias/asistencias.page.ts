@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AsistenciasService } from '../services/asistencias.service';
 
 @Component({
   selector: 'app-asistencias',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsistenciasPage implements OnInit {
 
-  constructor() { }
+  asistencias: any = [];
+  constructor(
+    public asistenciasService: AsistenciasService
+  ) { }
 
   ngOnInit() {
+    this.findAsistencias();
   }
 
+  findAsistencias() {
+    this.asistenciasService.getAsistencias(localStorage.getItem('ID_Usuario')).subscribe((response) => {
+      this.asistencias = response;
+      console.log(this.asistencias);
+
+    });
+  }
 }
